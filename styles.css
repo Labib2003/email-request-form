@@ -1,0 +1,19 @@
+.custom-card {
+  margin-bottom: -3rem;
+  transition: margin linear 0.2s;
+}
+
+.custom-fade {
+  visibility: hidden;
+  opacity: 0;
+  transition-property: visibility, opacity;
+  transition-timing-function: linear;
+  transition-duration: 0.3s, 0.6s;
+  transition-delay: -0.3s, -0.3s;
+}
+
+.custom-fade.is-shown {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
