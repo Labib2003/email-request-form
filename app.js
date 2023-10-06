@@ -45,6 +45,7 @@ submitButton.addEventListener("click", () => {
     }, 5000);
     return;
   }
+  submitButton.setAttribute("disabled", "true");
   fetch("https://formspree.io/f/mdoragvb", {
     method: "POST",
     body: JSON.stringify({
@@ -62,6 +63,7 @@ submitButton.addEventListener("click", () => {
         </span>
         `;
       openToast("success");
+      submitButton.removeAttribute("disabled");
     })
     .catch(() => {
       toastMessage.innerHTML = `
@@ -71,6 +73,7 @@ submitButton.addEventListener("click", () => {
         </span>
         `;
       openToast("danger");
+      submitButton.removeAttribute("disabled");
     })
     .finally(() => {
       setTimeout(() => {
