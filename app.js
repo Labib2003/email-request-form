@@ -64,6 +64,7 @@ submitButton.addEventListener("click", () => {
         `;
       openToast("success");
       submitButton.removeAttribute("disabled");
+      emailField.value = "";
     })
     .catch(() => {
       toastMessage.innerHTML = `
