@@ -50,6 +50,7 @@ submitButton.addEventListener("click", () => {
     method: "POST",
     body: JSON.stringify({
       email: emailField.value,
+      message: "I would like to remove my data from your database."
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
